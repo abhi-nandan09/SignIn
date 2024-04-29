@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
                 {
                     if(tiet1.getText().toString().isEmpty() || tiet2.getText().toString().isEmpty() || tiet3.getText().toString().isEmpty()){
                         Toast.makeText(getApplicationContext(),"Enter data in all the fields",Toast.LENGTH_SHORT).show();
+                    }else if(tiet1.getText().toString().length()>15 || tiet3.getText().toString().length()<5){
+                        Toast.makeText(getApplicationContext(),"Either name too big or Password too small",Toast.LENGTH_SHORT).show();
                     }else{
                         cd data=new cd(tiet1.getText().toString(),tiet2.getText().toString(),tiet3.getText().toString());
                         String ui=tiet2.getText().toString();
